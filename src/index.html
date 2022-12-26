@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="en-EN" class="page">
 
-@include('partials/head.html')
+@include('partials/home/head.html')
 
 <body class="body">
-  <div class="wrapper">
+<div class="wrapper">
     @include('partials/header.html')
     <main class="main">
-
+        <section class="casino">
+            <div class="casino__container">
+                <div class="casino__row">
+                    <div class="casino__info">
+                        <h1 class="casino__title">यूक्रेन में एक ही स्थान पर सर्वश्रेष्ठ ऑनलाइन कैसीनो!</h1>
+                        <a href="#" class="casino__link">कैसीनो समीक्षा</a>
+                    </div>
+                    <ul class="casino__list">
+                        @include('partials/home/casino__item.html')
+                        @include('partials/home/casino__item.html')
+                        @include('partials/home/casino__item.html')
+                        @include('partials/home/casino__item.html')
+                        @include('partials/home/casino__item.html')
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
     @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример include -->
-<!--    <picture>-->
-<!--      <source srcset="img/test-image.jpg" type="image/webp">-->
-<!--      <img loading="lazy" src="img/test-image.jpg" class="image" width="300" height="300" alt="icon">-->
-<!--    </picture>-->
 
-  </div>
+</div>
 </body>
 
 </html>
+
+

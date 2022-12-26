@@ -8,10 +8,11 @@
 
 // подключения компонентов страницы
 @import "components/header";
+@import "home/_casino.scss";
 
 
 [class*="__container"] {
-  max-width: 1630px;
+  max-width: 1270px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -20,13 +21,13 @@ body {
   &._lock {
     overflow: hidden;
   }
-  font-family: "VantaLight", sans-serif;
+  font-family: $font-popins-reg;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.02em;
   color: BLACK;
-  background: antiquewhite;
+  background: #1E1E1E;
 }
 
 

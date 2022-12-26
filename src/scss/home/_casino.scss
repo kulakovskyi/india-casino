@@ -1,0 +1,90 @@
+.casino{
+  padding: 140px 0 140px 0;
+  background: $burgundy url("../img/home/casino/bg-desc.webp") no-repeat 50% 90%/cover;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title{
+    font-family: $font-popins-semb;
+    font-size: 38px;
+    line-height: 54px;
+    color: $white-grey;
+    margin: 0 0 30px 0;
+    max-width: 330px;
+  }
+  &__link{
+    display: inline-block;
+    padding: 18px 32px 16px;
+    background: $orangeBtn;
+    box-shadow: $boxShadowBtn;
+    color: $white-grey;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color $transition;
+    &:hover{
+      background: $orangeBtn-hover;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    width: 315px;
+    &:not(:last-child){
+      margin: 0 0 15px 0;
+    }
+    &-image{
+      max-width: 150px;
+      margin: 0 15px 0 0;
+    }
+    &-info{
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-title{
+      font-family: $font-popins-reg;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.004em;
+      color: $white;
+    }
+    &-reviews{
+      display: flex;
+      align-items: center;
+      &-img{
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-grade{
+        font-family: $font-popins-reg;
+        font-size: 12px;
+        line-height: 18px;
+        color: $grey;
+      }
+    }
+    &-link{
+      display: inline-block;
+      border-radius: 8px;
+      padding: 7px 26px 5px;
+      font-family: $font-popins-reg;
+      color: $white;
+      font-size: 13px;
+      line-height: 20px;
+      background: $greyBtn;
+      box-shadow: $boxShadowBtn;
+      transition: background-color $transition;
+      &:hover{
+        background: $greyBtn-hover;
+      }
+    }
+  }
+
+}

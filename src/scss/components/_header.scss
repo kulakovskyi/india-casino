@@ -1,11 +1,14 @@
 .menu__icon {
   display: none;
   @include breakpoint($tablet-bp) {
-    display: block;
-    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    height: 39px;
-    width: 39px;
+    width: 44px;
+    height: 44px;
     position: relative;
     z-index: 5;
 
@@ -14,15 +17,17 @@
       position: absolute;
       width: 20px;
       height: 3px;
-      background: black;
+      background: $white;
       border-radius: 8px;
       top: 11px;
       left: 50%;
       transform: translate(-50%, 0);
-      transition: 0.3s ease;
+      opacity: 0;
+      transition: $transition;
     }
 
     &._active::before {
+      opacity: 1;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
@@ -33,95 +38,344 @@
       position: absolute;
       width: 20px;
       height: 3px;
-      background: black;
+      background: $white;
       border-radius: 8px;
       bottom: 11px;
       left: 50%;
       transform: translate(-50%, 0);
-      transition: 0.3s ease;
+      opacity: 0;
+      transition: $transition;
     }
 
     &._active::after {
+      opacity: 1;
       bottom: 50%;
       left: 50%;
       transform: translate(-50%, 50%) rotate(45deg);
     }
 
-    span {
-      position: absolute;
-      width: 20px;
-      height: 3px;
-      background: black;
-      border-radius: 8px;
-      bottom: 11px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      transition: 0.3s ease;
-    }
-
-    &._active span {
+    &._active img {
       opacity: 0;
     }
   }
 }
 
-.header__menu {
-  @include breakpoint($tablet-bp) {
-    position: fixed;
-    top: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.959);
-    overflow: auto;
-    left: 0;
-    z-index: -1;
-    transition: top 0.3s ease 0s;
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 17px 0;
 
-    &::before {
-      content: "";
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 1 1 auto;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include breakpoint($tablet-bp) {
+      padding: 100px 15px 0;
+      flex-direction: column-reverse;
+      align-items: stretch;
+      justify-content: flex-end;
       position: fixed;
-      top: 0;
-      left: 0;
+      top: -100%;
       width: 100%;
-      background: rgba(0, 0, 0, 0.671);
-      height: 72px;
+      height: 100%;
+      background: linear-gradient(189.48deg, #20030B -42.96%, #480F1F 92.84%);
+      overflow: auto;
+      left: 0;
+      z-index: 4;
+      transition: top 0.3s ease 0s;
+      &._active {
+        top: 0;
+      }
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    @include breakpoint($tablet-bp) {
+      flex: 0 1 auto;
+      max-width: 500px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    &-input {
+      position: absolute;
+      font-family: $font-popins-reg;
+      display: inline-block;
+      width: 350px;
+      padding: 10px 10px 10px 30px;
+      font-size: 17px;
+      line-height: 30px;
+      border-radius: 12px;
+      background: $white;
+      color: $grey;
+      right: -6px;
+      top: 50px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transition, visibility $transition;
+
+      &._active {
+        width: 350px;
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
-    &._active {
-      top: 0;
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: $white;
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      transition: background-color $transition;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 25px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $orange;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 25px;
+        border-radius: 5px;
+        height: 3px;
+        background-color: $orange;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+
+      &._active::before,
+      &._active::after {
+        opacity: 1;
+      }
+
+      &:hover {
+        background: $white-hover;
+      }
+    }
+
+    &-image {
+      fill: $orange;
+      transition: opacity $transition;
+      opacity: 1;
+
+      &._active {
+        opacity: 0;
+      }
     }
   }
 }
 
-.header__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+@include breakpoint($tablet-bp) {
+  .header {
+    &__search {
+      margin: 0 auto 70px;
+      max-width: 500px;
+      width: 100%;
+      &-input {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        width: 100%;
+        padding: 16px 13px 14px 45px;
+        font-size: 17px;
+        line-height: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        &::placeholder{
+          color: $white;
+        }
+      }
 
-  .menu__list {
+      &-btn {
+        background: transparent;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  &__list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 56px;
-
-    @include breakpoint($tablet-bp) {
+    @include breakpoint($tablet-bp){
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 100px;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin: 0 35px 0 0;
     }
 
-    .menu__link {
-      font-weight: 600;
-      font-size: 18px;
-      color: #ffffff;
-      transition: 0.3s ease;
+    @include breakpoint($tablet-bp){
+      &:not(:last-child) {
+        margin: 0 0 35px 0;
+      }
+    }
+
+    &-sub_list {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      @include breakpoint($tablet-bp){
+        flex-direction: column;
+      }
+
+      &:hover .menu__link {
+        color: $white-hover;
+      }
+
+      &:hover::before {
+        content: '';
+      }
+
+      &:hover::after {
+        background: url("../img/polygon-hover.svg") no-repeat 50% 0/contain;
+      }
+
+      &::before {
+        position: absolute;
+        background: transparent;
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        background: url("../img/polygon.svg") no-repeat 50% 0/contain;
+        width: 11px;
+        height: 7px;
+        margin-left: 6px;
+      }
+
+    }
+
+    &-item {
+      position: relative;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        background: url("../img/polygon-hover.svg") no-repeat 50% 0/contain;
+        width: 11px;
+        height: 7px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);;
+        pointer-events: none;
+      }
+    }
+
+    &-list {
+      position: absolute;
+      z-index: 1;
+      min-width: 257px;
+      top: 30px;
+      left: 0;
+      display: none;
+      padding: 10px 20px;
+      background: linear-gradient(180deg, #FCEDF0 0%, #FFFFFF 29.32%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      @include breakpoint($tablet-bp){
+       position: static;
+      }
+    }
+
+    &-link {
+      font-family: $font-popins-reg;
+      color: $black-one;
+      font-size: 15px;
+      line-height: 34px;
+      display: inline-block;
+      transition: color $transition;
+      width: 100%;
 
       &:hover {
-        color: #003c80;
+        color: $orange;
       }
+    }
+
+    &:hover &-list {
+      display: block;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-family: $font-popins-reg;
+    font-size: 18px;
+    color: $white;
+    transition: color $transition;
+
+    &:hover {
+      color: $white-hover;
+    }
+
+    @include breakpoint($tablet-bp){
+      font-size: 22px;
+      line-height: 24px;
     }
   }
 }
