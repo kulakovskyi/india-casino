@@ -1,0 +1,31 @@
+// базовые подключения
+
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "base/nullstyle";
+@import "base/wrapper";
+
+// подключения компонентов страницы
+@import "components/header";
+
+
+[class*="__container"] {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+
+  font-family: "VantaLight", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: BLACK;
+  background: antiquewhite;
+}
