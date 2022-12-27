@@ -6,9 +6,19 @@
 @import "base/wrapper";
 
 
-// подключения компонентов страницы
-@import "components/header";
-@import "home/_casino.scss";
+
+
+
+.title{
+  font-family: $font-popins-semb;
+  color: $black-one;
+  font-size: 24px;
+  line-height: 36px;
+  @media screen and (max-width: 600px){
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 
 
 [class*="__container"] {
@@ -30,6 +40,12 @@ body {
   background: #1E1E1E;
 }
 
+// подключения компонентов страницы
+@import "components/header";
+@import "home/_casino.scss";
+@import "home/_best.scss";
+@import "home/_slot.scss";
+@import "home/_bonus.scss";
 
 
 

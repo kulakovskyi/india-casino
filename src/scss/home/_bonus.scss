@@ -1,0 +1,227 @@
+.bonus {
+  padding: 50px 0;
+  background: $pink url("../img/home/bonus/bg-desc.webp") no-repeat 50% 0/cover;
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+    color: $black-one;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    color: $grey;
+    text-align: center;
+    max-width: 940px;
+    margin: 0 auto 20px auto;
+  }
+
+  &__link{
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+    border-radius: 8px;
+    background: $burgundyBtn;
+    box-shadow: $boxShadowBtn;
+    transition: background-color $transition;
+    &:hover{
+      background: $burgundyBtn-hover;
+    };
+  }
+
+  &__tabs {
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+    &-item {
+      &:not(:last-child) {
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 8px 18px 6px;
+      font-size: 13px;
+      line-height: 22px;
+      color: $grey-tabs;
+      border-radius: 8px;
+      background: transparent;
+      transition: background-color $transition, color $transition, box-shadow $transition;
+
+      &:hover {
+        color: $white;
+        background: $burgundyBtn;
+        box-shadow: $boxShadowBtn;
+      }
+
+      &._active {
+        color: $white;
+        background: $burgundyBtn;
+        box-shadow: $boxShadowBtn;
+      }
+
+    }
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+    margin: 0 0 30px 0;
+  }
+
+  &__item{
+    padding: 20px;
+    border-radius: 12px;
+    background: $white;
+    position: relative;
+    max-width: 330px;
+
+    &-info{
+      position: absolute;
+      cursor: pointer;
+      top: 20px;
+      right: 20px;
+      padding: 10.5px;
+      background: $burgundyBtn;
+      box-shadow: $boxShadowBtn;
+      border-radius: 8px;
+      transition: background-color $transition;
+      &:hover{
+        background: $burgundyBtn-hover;
+      }
+      &:hover &-text{
+        display: block;
+      }
+      &-text{
+        display: none;
+        padding: 15px;
+        border-radius: 8px;
+        background: $burgundyBtn;
+        color: $white;
+        width: 150px;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &-image{
+      max-width: 160px;
+      margin: 0 0 10px 0;
+    }
+    &-title{
+      font-size: 17px;
+      line-height: 26px;
+      letter-spacing: -0.004em;
+      color: $black-one;
+      margin: 0 0 2px 0;
+    }
+    &-licensed{
+      display: flex;
+      color: $blue;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      margin: 0 0 20px 0;
+      &-one{
+        margin: 0 8px 0 0;
+      }
+    }
+    &-link{
+      display: inline-block;
+      border-radius: 8px;
+      min-width: 160px;
+      text-align: center;
+      padding: 12px 30px 10px;
+      font-size: 15px;
+      line-height: 20px;
+      color: $white;
+      background: $orangeBtn;
+      box-shadow: $boxShadowBtn;
+      transition: background-color $transition;
+      &:hover{
+        background: $orangeBtn-hover;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1240px){
+  .bonus{
+    &__container{
+      padding: 0;
+    }
+    &__title,
+    &__text{
+      padding: 0 15px;
+    }
+    &__tabs{
+      margin: 0;
+
+      &-wrap{
+        justify-content: flex-start;
+        overflow-x: scroll;
+        padding: 0 15px;
+        margin: 0 0 20px 0;
+      }
+
+    }
+
+    &__list{
+      display: flex;
+      overflow-x: scroll;
+      align-items: flex-start;
+      gap: 0;
+      padding: 0 15px;
+    }
+
+    &__item{
+      min-width: 310px;
+      max-width: 330px;
+      &:not(:last-child){
+        margin: 0 15px 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .bonus{
+    background: $pink;
+    &__text{
+      font-size: 13px;
+      line-height: 22px;
+    }
+    &__link{
+      width: calc(100% - 30px);
+
+    }
+  }
+}

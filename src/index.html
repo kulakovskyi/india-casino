@@ -7,23 +7,10 @@
 <div class="wrapper">
     @include('partials/header.html')
     <main class="main">
-        <section class="casino">
-            <div class="casino__container">
-                <div class="casino__row">
-                    <div class="casino__info">
-                        <h1 class="casino__title">यूक्रेन में एक ही स्थान पर सर्वश्रेष्ठ ऑनलाइन कैसीनो!</h1>
-                        <a href="#" class="casino__link">कैसीनो समीक्षा</a>
-                    </div>
-                    <ul class="casino__list">
-                        @include('partials/home/casino__item.html')
-                        @include('partials/home/casino__item.html')
-                        @include('partials/home/casino__item.html')
-                        @include('partials/home/casino__item.html')
-                        @include('partials/home/casino__item.html')
-                    </ul>
-                </div>
-            </div>
-        </section>
+        @include('partials/home/casino.html')
+        @include('partials/home/best.html')
+        @include('partials/home/slot.html')
+        @include('partials/home/bonus.html')
     </main>
     @include('partials/footer.html')
 

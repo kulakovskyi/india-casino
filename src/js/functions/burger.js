@@ -10,13 +10,18 @@ iconMenu.addEventListener("click", function (e) {
 
 //openMenu on mob
 const itemMenuSub = document.querySelectorAll('.menu__item-sub_list');
+const itemHoverDesc = document.querySelectorAll('.menu__item-hover-desc');
 
 if(window.innerWidth <= 1024){
+  itemHoverDesc.forEach(item => {
+    item.classList.remove('menu__item-hover-desc')
+  })
+
   itemMenuSub.forEach(item => {
     let menuSub = item.querySelector('.menu__item-list');
     item.addEventListener('click', ()=>{
       menuSub.classList.toggle('_open')
-
+      item.classList.toggle('_open')
     })
   })
 }
