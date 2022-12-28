@@ -31,13 +31,6 @@
     align-self: center;
     text-align: center;
     padding: 19px 85px 17px;
-    border-radius: 8px;
-    background: $burgundyBtn;
-    box-shadow: $boxShadowBtn;
-    transition: background-color $transition;
-    &:hover{
-      background: $burgundyBtn-hover;
-    };
   }
 
   &__tabs {
@@ -46,7 +39,7 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background: rgba(255, 255, 255, 0.01);
+    background: $pink;
     box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
 
@@ -67,7 +60,7 @@
       padding: 8px 18px 6px;
       font-size: 13px;
       line-height: 22px;
-      color: $white;
+      color: $black-font-orangeBtn;
       border-radius: 8px;
       background: transparent;
       transition: background-color $transition, color $transition, box-shadow $transition;
@@ -121,19 +114,11 @@
     }
     &-link{
       display: inline-block;
-      border-radius: 8px;
       min-width: 160px;
       text-align: center;
       padding: 12px 30px 10px;
       font-size: 15px;
       line-height: 20px;
-      color: $white;
-      background: $orangeBtn;
-      box-shadow: $boxShadowBtn;
-      transition: background-color $transition;
-      &:hover{
-        background: $orangeBtn-hover;
-      }
     }
   }
 
@@ -180,7 +165,7 @@
 
 @media screen and (max-width: 600px){
   .slot{
-    background: linear-gradient(252.32deg, #8A2336 0%, #631728 28.99%, #340918 100%);
+    background: $burgundy-gradient;
     &__text{
       font-size: 13px;
       line-height: 22px;

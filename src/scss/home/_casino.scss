@@ -22,15 +22,7 @@
   &__link{
     display: inline-block;
     padding: 18px 32px 16px;
-    background: $orangeBtn;
-    box-shadow: $boxShadowBtn;
-    color: $white-grey;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color $transition;
-    &:hover{
-      background: $orangeBtn-hover;
-    }
   }
   &__item{
     display: flex;
@@ -42,6 +34,9 @@
     &-image{
       max-width: 150px;
       margin: 0 15px 0 0;
+      img{
+        border-radius: 8px;
+      }
     }
     &-info{
       flex: 1 1 auto;
@@ -50,7 +45,6 @@
       align-items: flex-start;
     }
     &-title{
-      font-family: $font-popins-reg;
       font-size: 14px;
       line-height: 21px;
       letter-spacing: -0.004em;
@@ -72,18 +66,11 @@
     }
     &-link{
       display: inline-block;
-      border-radius: 8px;
       padding: 7px 26px 5px;
       font-family: $font-popins-reg;
-      color: $white;
       font-size: 13px;
       line-height: 20px;
-      background: $greyBtn;
-      box-shadow: $boxShadowBtn;
-      transition: background-color $transition;
-      &:hover{
-        background: $greyBtn-hover;
-      }
+
     }
   }
 }

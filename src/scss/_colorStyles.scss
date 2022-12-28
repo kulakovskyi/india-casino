@@ -1,0 +1,34 @@
+.burgundy-btn{
+  color: $white;
+  border-radius: 8px;
+  background: $burgundyBtn;
+  box-shadow: $boxShadowBtn;
+  transition: background-color $transition;
+  &:hover{
+    background: $burgundyBtn-hover;
+  }
+}
+
+
+.orange-btn{
+  border-radius: 8px;
+  background: $orangeBtn;
+  box-shadow: $boxShadowBtn;
+  color: $black-font-orangeBtn;
+  transition: background-color $transition;
+  &:hover{
+    background: $orangeBtn-hover;
+  }
+}
+
+.grey-btn{
+  border-radius: 8px;
+  color: $white;
+  background: $greyBtn;
+  box-shadow: $boxShadowBtn;
+  transition: background-color $transition;
+  &:hover{
+    background: $greyBtn-hover;
+  }
+}
+
