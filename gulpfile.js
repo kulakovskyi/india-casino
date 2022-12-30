@@ -1,9 +1,10 @@
+const gulp = require('gulp');
 const {
   src,
   dest,
   series,
   watch
-} = require('gulp');
+} = gulp;
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
@@ -37,23 +38,29 @@ const rootFolder = path.basename(path.resolve());
 // paths
 const srcFolder = './src';
 const buildFolder = './app';
+
+
 const paths = {
   srcSvg: `${srcFolder}/img/svg/**.svg`,
   srcImgFolder: `${srcFolder}/img`,
   buildImgFolder: `${buildFolder}/img`,
   srcScss: `${srcFolder}/scss/**/*.scss`,
   buildCssFolder: `${buildFolder}/css`,
-  srcFullJs: `${srcFolder}/js/**/*.js`,
-  srcMainJs: `${srcFolder}/js/main.js`,
+  //srcFullJs: `${srcFolder}/js/*.js`,
+  srcFullJs: ['./src/js/script-home.js', './src/js/script-page2.js'],
+  srcMainJs: `${srcFolder}/js/script-page2.js`,
   buildJsFolder: `${buildFolder}/js`,
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
 };
 
+
+
 let isProd = false; // dev by default
 
 const clean = () => {
   return del([buildFolder])
+
 }
 
 //svg sprite
@@ -132,7 +139,7 @@ const stylesBackend = () => {
 
 // scripts
 const scripts = () => {
-  return src(paths.srcMainJs)
+  return src(paths.srcFullJs)
     .pipe(plumber(
       notify.onError({
         title: "JS",
@@ -142,7 +149,7 @@ const scripts = () => {
     .pipe(webpackStream({
       mode: isProd ? 'production' : 'development',
       output: {
-        filename: 'main.js',
+        filename: 'script-page2.js',
       },
       module: {
         rules: [{
@@ -170,6 +177,60 @@ const scripts = () => {
     .pipe(browserSync.stream());
 }
 
+
+const scripts2 = () => {
+    // convert Gulp array into entry property for Webpack
+    let fileName = null;
+    let entryObj = {};
+    paths.srcFullJs.map((filePath) => {
+        fileName = filePath.split('/').pop().split('.').slice(0, -1).join('.');
+        entryObj[fileName] = filePath;
+    });
+
+    let webpackConf = {
+        mode: isProd ? 'production' : 'development',
+        output: {
+            filename: `[name].js`,
+            sourceMapFilename: '[name].map'
+        },
+        module: {
+            rules: [{
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', {
+                                targets: "defaults"
+                            }]
+                        ]
+                    }
+                }
+            }]
+        },
+        devtool: !isProd ? 'source-map' : false
+    }
+
+// add converted entry property to Webpack
+    webpackConf.entry = entryObj;
+    return src(paths.srcFullJs)
+      .pipe(plumber(
+          notify.onError({
+            title: "JS",
+            message: "Error: <%= error.message %>"
+          })
+      ))
+
+      .pipe(webpackStream(webpackConf))
+      .on('error', function (err) {
+          console.error('WEBPACK ERROR', err);
+          this.emit('end');
+      })
+      .pipe(dest(paths.buildJsFolder))
+      .pipe(browserSync.stream());
+}
+
 // scripts backend
 const scriptsBackend = () => {
   return src(paths.srcMainJs)
@@ -182,7 +243,7 @@ const scriptsBackend = () => {
     .pipe(webpackStream({
       mode: 'development',
       output: {
-        filename: 'main.js',
+        filename: 'script-page2.js',
       },
       module: {
         rules: [{
@@ -256,7 +317,7 @@ const watchFiles = () => {
   });
 
   watch(paths.srcScss, styles);
-  watch(paths.srcFullJs, scripts);
+  watch(paths.srcFullJs, scripts2);
   watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
@@ -316,11 +377,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts2, styles, resources, images, webpImages, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites)
+exports.backend = series(clean, htmlInclude,  stylesBackend, resources, images, webpImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts2, styles, resources, images, webpImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 

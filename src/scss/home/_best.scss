@@ -89,8 +89,8 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background: $white;
     border-radius: 12px;
+    background: $white url('../img/home/best/coupon-bg.svg') no-repeat right center/contain;
     &:not(:last-child){
       margin: 0 0 10px 0;
     }
@@ -98,7 +98,7 @@
       flex: 1 1 auto;
       display: flex;
       align-items: center;
-      padding: 25px;
+      padding: 25px 0px 25px 25px;
       border-right: 3px dotted $pink;
       position: relative;
       &::before,
@@ -152,7 +152,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin: 0 65px 0 0;
+      margin: 0 25px 0 0;
+      min-width: 164px;
     }
 
     &-title {
@@ -197,6 +198,7 @@
           font-size: 12px;
           line-height: 12px;
           color: $black-one;
+          white-space: nowrap;
         }
       }
 
@@ -213,6 +215,7 @@
           font-size: 12px;
           line-height: 12px;
           color: $black-one;
+          white-space: nowrap;
         }
       }
     }
@@ -250,21 +253,20 @@
     &-minus {
       display: flex;
       flex-direction: column;
-      max-width: 185px;
 
       &-txt {
         display: flex;
-        align-items: center;
-        font-size: 13px;
+        align-items: flex-start;
+        font-size: 12px;
         line-height: 28px;
         color: $grey;
 
         &::before {
           content: '';
           display: inline-block;
-          margin: 0 8px 0 0;
-          width: 16px;
-          height: 16px;
+          margin: 6px 8px 0 0;
+          min-width: 16px;
+          min-height: 16px;
         }
       }
     }
@@ -279,19 +281,10 @@
       }
     }
 
-    &-minus {
-      &-txt {
-        &::before {
-          background: url("../img/home/best/minus.svg") no-repeat 0% 0%/contain;
-        }
-      }
-    }
 
     &-coupon {
-      min-width: 190px;
-      padding: 25px 40px 25px 25px;
-
-      background: url("../img/home/best/coupon-bg.svg") no-repeat 0% 0%/cover;
+      min-width: 240px;
+      padding: 0 15px 0 25px;
       &-title {
         font-family: $font-popins-semb;
         font-size: 15px;
@@ -307,6 +300,7 @@
         letter-spacing: -0.004em;
         color: $black-one;
         margin: 0 0 5px 0;
+        white-space: nowrap;
       }
 
       &-text {
@@ -345,7 +339,7 @@
         justify-content: flex-start;
         overflow-x: scroll;
         padding: 0 15px;
-        margin: 0 0 30px 0;
+        margin: 0 0 5px 0;
       }
 
     }
@@ -359,6 +353,7 @@
       min-width: 320px;
       max-width: 335px;
       flex-direction: column;
+      background: $white;
 
       &:not(:last-child){
         margin: 0 15px 0 0;

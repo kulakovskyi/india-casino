@@ -120,6 +120,9 @@
     &-image{
       max-width: 160px;
       margin: 0 0 10px 0;
+      img{
+        border-radius: 8px;
+      }
     }
     &-title{
       font-size: 17px;

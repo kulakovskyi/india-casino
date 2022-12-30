@@ -5,7 +5,7 @@ import { burger } from './functions/burger';
 //import { scrollAnchors } from './functions/scrollAnchors';
 
 // Реализация аккордеона
-import { accorderon } from './functions/accorderon';
+//import { accorderon } from './functions/accorderon';
 
 
 

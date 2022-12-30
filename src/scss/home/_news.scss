@@ -149,11 +149,28 @@
 
   h3,h4,h5,h6{
     font-family: $font-popins-semb;
-    font-size: 20px;
-    line-height: 48px;
     letter-spacing: -0.01em;
     color: $black-one;
-    margin: 0 0 10px 0;
+  }
+
+  h3{
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  h4{
+    font-size: 19px;
+    line-height: 48px;
+  }
+
+  h5{
+    font-size: 18px;
+    line-height: 48px;
+  }
+
+  h6{
+    font-size: 17px;
+    line-height: 48px;
   }
 
   p{
@@ -169,14 +186,14 @@
     counter-reset: counter-ol;
     li{
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       &::before{
         counter-increment: counter-ol;
         content: counter(counter-ol) " " ;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 10px 0 0;
+        margin: 5px 10px 0 0;
         font-family: $font-popins-semb;
         color: $white;
         min-width: 24px;
@@ -216,6 +233,9 @@
         font-family: sans-serif;
         border-radius: 8px;
         background: $burgundy-gradient;
+      }
+      &:not(:last-child){
+        margin: 0 0 15px 0;
       }
       p{
         margin: 0;

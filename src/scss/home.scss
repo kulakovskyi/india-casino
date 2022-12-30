@@ -33,11 +33,10 @@ body {
   }
   font-family: $font-popins-reg;
   font-style: normal;
-  font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: BLACK;
-  background: #1E1E1E;
+  color: $black-one;
+  background: $pink;
 }
 
 // подключения компонентов страницы
