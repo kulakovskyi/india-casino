@@ -19,11 +19,11 @@
       position: relative;
       font-size: 12px;
       line-height: 20px;
-      color: $grey;
+      color: $black-one;
       transition: color $transition;
 
       &:hover {
-        color: $white;
+        color: $grey;
       }
 
       &:not(:last-child) {
@@ -66,7 +66,7 @@
       white-space: nowrap;
       font-size: 17px;
       line-height: 22px;
-      color: $grey;
+      color: $black-one;
       transition: color $transition;
       &._active::before{
         opacity: 1;
@@ -280,7 +280,7 @@
     &-subtext{
       font-size: 13px;
       line-height: 16px;
-      color: $grey;
+      color: $black-one;
       max-width: 160px;
       span{
         font-family: $font-popins-semb;

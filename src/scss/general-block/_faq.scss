@@ -1,6 +1,7 @@
 .faq{
   padding: 55px 0;
-  background: $white url("../img/general-block-image/bg-faq-desc.webp") no-repeat 50% 0/cover;
+  background: $white url("../img/general-block-image/bg-faq-desc.webp") no-repeat 50% 0;
+  background-size: 100%;
   &__title{
     text-align: center;
     color: $black-one;
