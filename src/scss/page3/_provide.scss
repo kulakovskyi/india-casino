@@ -1,0 +1,33 @@
+.provide{
+  padding: 30px;
+  background: $white;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  &__title{
+    margin: 0 0 10px 0;
+  }
+  &__list{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: calc(33.33% - 8px) calc(33.33% - 8px) calc(33.33% - 8px);
+  }
+  &__item{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: $pink;
+    border-radius: 4px;
+    &-image{
+      max-width: 50px;
+      margin: 0 15px 0 0;
+      img{
+        border-radius: 4px;
+      }
+    }
+    &-name{
+      font-size: 15px;
+      line-height: 30px;
+      color: $black-one;
+    }
+  }
+}

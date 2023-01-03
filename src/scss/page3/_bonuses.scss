@@ -1,0 +1,99 @@
+.bonuses {
+  background: $white;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 0 0 20px 0;
+
+
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__list{
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 320px 120px 100px 100px;
+    align-items: center;
+    &:not(:last-child){
+      margin: 0 0 20px 0;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 14px 0 0;
+      }
+
+      &-txt {
+        font-size: 15px;
+        line-height: 22px;
+        color: $grey-tabs;
+      }
+    }
+
+    &-offer {
+      font-size: 15px;
+      line-height: 22px;
+      color: $grey-tabs;
+    }
+
+    &-deposit {
+      font-size: 15px;
+      line-height: 22px;
+      color: $grey-tabs;
+    }
+
+    &-code {
+      font-size: 15px;
+      line-height: 22px;
+      color: $grey-tabs;
+    }
+    &-link{
+      display: inline-block;
+      padding: 12px 29px 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  &__item-th {
+    display: grid;
+    grid-template-columns: 1fr 320px 120px 100px 100px;
+    align-items: center;
+    font-size: 15px;
+    line-height: 22px;
+    color: $grey;
+    text-align: start;
+    margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid $grey-white;
+  }
+
+  &__all-link{
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    color: $orangeBtn;
+    transition: color $transition;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 7px;
+      top: 56%;
+      right: -15px;
+      transform: translateY(-50%);
+      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
+    }
+    &:hover{
+      color: $orangeBtn-hover;
+    }
+  }
+}

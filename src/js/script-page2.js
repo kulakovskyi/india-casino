@@ -2,7 +2,7 @@
 import { burger } from './functions/burger';
 
 //Acordeon
-//import { accorderon } from './functions/accorderon';
+import { accorderon } from './functions/accorderon';
 
 //header input
 import { inputComponent } from './components/inputHeaderComponent';
@@ -16,4 +16,5 @@ import { scrollTop } from './components/scrollTopComponent';
 //Blocks
 import { bestItemMobButton } from './components/home/bestItem-mobButtonComponent';
 
-
+// Реализация скрола по якорю
+import { scrollAnchors } from './functions/scrollAnchors';

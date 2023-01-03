@@ -55,8 +55,8 @@
       transition: none;
       border: 2px solid $white;
       &._active{
-        border: 2px solid $orange;
-        color: $orange;
+        border: 2px solid $black-one;
+        color: $black-one;
       }
       &::before{
         background: none;

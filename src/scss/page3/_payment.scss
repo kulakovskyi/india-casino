@@ -1,0 +1,74 @@
+.payment {
+  padding: 30px;
+  background: $white;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+
+  }
+
+  &__tabs {
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+    &-btn {
+      background: transparent;
+      font-size: 13px;
+      line-height: 22px;
+      padding: 8px 18px 6px;
+      display: inline-block;
+      border-radius: 8px;
+      transition: background-color $transition, box-shadow $transition, color $transition;
+
+      &:hover{
+        background: $burgundyBtn;
+        box-shadow: $boxShadowBtn;
+        color: $white;
+      }
+
+      &._active{
+        background: $burgundyBtn;
+        box-shadow: $boxShadowBtn;
+        color: $white;
+      }
+
+
+
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: calc(33.33% - 8px) calc(33.33% - 8px) calc(33.33% - 8px);
+  }
+
+  &__item {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: $pink;
+    border-radius: 4px;
+
+    &-image {
+      max-width: 50px;
+      margin: 0 15px 0 0;
+
+      img {
+        border-radius: 4px;
+      }
+    }
+
+    &-name {
+      font-size: 15px;
+      line-height: 30px;
+      color: $black-one;
+    }
+  }
+}
