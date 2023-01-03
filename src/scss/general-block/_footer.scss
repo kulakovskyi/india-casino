@@ -95,7 +95,8 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
-    display: flex;
+    //display: flex;
+    display: none;
     align-items: center;
     &._hidden{
       display: none;
@@ -190,7 +191,6 @@
     &__row{
       margin: 0 0 40px 0;
       grid-template-columns: calc(50% - 15px) calc(50% - 15px);
-      justify-items: center;
       gap: 30px 15px;
     }
     &__item{

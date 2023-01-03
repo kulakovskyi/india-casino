@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('partials/page2/head.html')
+
+<style>
+    .main{
+        background: #2C0715;
+        padding: 150px ;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .menu a{
+        font-size: 30px;
+        color: #FFFFFF;
+        margin: 0 0 30px 0;
+    }
+
+    .menu a:hover{
+        color: #9d9292;
+    }
+</style>
+
+<body class="body">
+<div class="wrapper">
+    @include('partials/general-block/header.html')
+    <main class="main">
+        <div class="menu">
+            <a href="home.html">HOME</a>
+            <a href="page2.html">PAGE2</a>
+        </div>
+    </main>
+    @include('partials/general-block/footer.html')
+</div>
+</body>
+
+</html>
