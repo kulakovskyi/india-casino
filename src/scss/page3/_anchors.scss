@@ -43,3 +43,37 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .anchors{
+    padding: 0;
+    background: transparent;
+    margin: 0 0 20px 0;
+    &__list{
+      display: flex;
+      overflow-x: scroll;
+      padding: 0 15px;
+    }
+    &__item{
+      border: none;
+      &:not(:last-child){
+        margin: 0 10px 0 0;
+      }
+    }
+    &__link{
+      padding: 12px 20px 10px !important ;
+      white-space: nowrap;
+      border: 2px solid $white;
+      color: $black-one;
+      border-radius: 8px;
+      background: $white;
+      &._active{
+        border: 2px solid $black-one;
+      }
+      &::after{
+        background: none;
+        content: none;
+      }
+    }
+  }
+}

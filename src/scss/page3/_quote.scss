@@ -70,3 +70,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .quote{
+    border-radius: 0;
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote{
+    padding: 30px 15px;
+    &::before{
+      right: 48px;
+      left: auto;
+    }
+    &::after{
+      right: 25px;
+      left: auto;
+    }
+    &__info{
+      &-wrap{
+        margin: 0 0 20px 0;
+        padding: 0 60px 0 0;
+      }
+    }
+    &__text{
+      font-size: 13px;
+      line-height: 28px;
+    }
+
+  }
+}

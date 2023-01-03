@@ -98,3 +98,25 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .casino-online{
+    width: 80%;
+    margin: 0 auto 20px auto;
+    &__item{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .casino-online{
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 0;
+    &__title{
+      font-size: 20px;
+      line-height: 48px;
+    }
+  }
+}

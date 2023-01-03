@@ -46,6 +46,22 @@ body {
   z-index: 3;
 }
 
+.main{
+  margin: 0 40px 0 0;
+  @media screen and (max-width: 1285px){
+    margin: 0 20px 0 0;
+  }
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.aside{
+  min-width: 320px;
+}
+
+
 //aside
 @import "page3/_anchors";
 @import "page3/_top-casino";
@@ -66,16 +82,4 @@ body {
 @import "general-block/_subscribe.scss";
 @import "general-block/_footer.scss";
 
-.container {
-  padding: 0 30px;
-}
-
-.main{
-  margin: 0 40px 0 0;
-}
-
-.aside{
-  min-width: 320px;
-
-}
 

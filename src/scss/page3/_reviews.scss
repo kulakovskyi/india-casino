@@ -1,24 +1,30 @@
-.reviews{
+.reviews {
   background: $white;
   border-radius: 8px;
   padding: 30px;
   margin: 0 0 20px 0;
-  &__title{
+
+  &__title {
     margin: 0 0 10px 0;
   }
-  &__row{
+
+  &__row {
     display: flex;
     align-items: flex-start;
   }
-  &__list{
+
+  &__list {
     display: flex;
     flex-direction: column;
     width: calc(50% - 6px);
-    &-plus{
+
+    &-plus {
       margin: 0 12px 0 0;
-      .reviews__item{
+
+      .reviews__item {
         position: relative;
-        &::before{
+
+        &::before {
           content: '';
           position: absolute;
           width: 40px;
@@ -30,11 +36,14 @@
         }
       }
     }
-    &-minus{
+
+    &-minus {
       margin: 0 12px 0 0;
-      .reviews__item{
+
+      .reviews__item {
         position: relative;
-        &::before{
+
+        &::before {
           content: '';
           position: absolute;
           width: 40px;
@@ -48,20 +57,75 @@
     }
   }
 
-  &__item{
+  &__item {
     padding: 20px 20px 20px 70px;
     background: $pink;
     border-radius: 4px;
     min-height: 80px;
     display: flex;
     align-items: center;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin: 0 0 12px 0;
     }
-    &-text{
+
+    &-text {
       font-size: 15px;
       line-height: 20px;
       color: $black-one;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .reviews {
+    padding: 30px 15px 20px;
+    margin: 0 0 10px 0;
+    border-radius: 0;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .reviews {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &-plus {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .reviews {
+    &__list {
+      &-plus,
+      &-minus {
+        .reviews__item {
+          &::before {
+            width: 32px;
+            height: 32px;
+            left: 14px;
+          }
+        }
+
+      }
+    }
+    &__item{
+      padding: 15px 15px 15px 60px;
+      &-text{
+        font-size: 13px;
+        line-height: 20px;
+
+      }
     }
   }
 }

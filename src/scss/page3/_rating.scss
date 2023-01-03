@@ -139,3 +139,40 @@
     stroke: $yellow-circle;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .ratings{
+    border-radius: 0;
+    margin: 0 0 10px 0;
+    &__item{
+      &-text{
+        width: 45px;
+        height: 45px;
+        font-size: 17px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  .single-chart {
+    width: 70px;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ratings{
+    padding: 30px 15px 20px;
+    &__rating{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+      justify-content: stretch;
+    }
+    &__item{
+      &:not(:last-child) {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+}
