@@ -13,8 +13,5 @@ import { scrollTop } from './components/scrollTopComponent';
 //Acordeon
 import { accorderon } from './functions/accorderon';
 
-//blocks
-import { progressBar } from './components/page3/progressBarComponent';
-
 // Реализация скрола по якорю
 import { scrollAnchors } from './functions/scrollAnchors';
