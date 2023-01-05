@@ -1,0 +1,44 @@
+.breadcrumbs {
+  padding: 10px 0 0 0;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    color: $grey;
+    transition: color $transition;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin: 0 18px 0 0;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        font-size: 12px;
+        line-height: 20px;
+        color: $grey;
+        right: -11px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .breadcrumbs {
+    &__link {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
