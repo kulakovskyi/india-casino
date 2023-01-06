@@ -95,8 +95,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
-    //display: flex;
-    display: none;
+    display: flex;
     align-items: center;
     &._hidden{
       display: none;
