@@ -127,6 +127,7 @@
       line-height: 30px;
       border-radius: 12px;
       background: $white;
+      border: 1.5px solid $grey;
       color: $grey;
       right: -6px;
       top: 50px;
@@ -212,6 +213,7 @@
       width: 100%;
 
       &-input {
+        border: none;
         display: block;
         opacity: 1;
         visibility: visible;

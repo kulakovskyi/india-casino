@@ -1,5 +1,4 @@
 .best {
-  padding:0 0 50px 0;
   background: $pink;
 
   &__container{
@@ -465,8 +464,6 @@
 
 @media screen and (max-width: 600px){
   .best{
-    padding: 0 0 40px 0;
-
     &__text{
       font-size: 13px;
       line-height: 22px;
