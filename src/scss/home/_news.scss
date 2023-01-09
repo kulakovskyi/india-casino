@@ -14,9 +14,25 @@
 
 //casino-online aside styles
 .casino-online{
-  padding: 30px 40px;
-  border-radius: 8px;
-  background: $burgundy-gradient;
+  display: flex;
+  flex-direction: column;
+  &__wrap{
+    padding: 30px 40px;
+    border-radius: 8px;
+    background: $burgundy-gradient;
+    margin: 0 0 20px 0;
+  }
+
+  &__all-link{
+    align-self: center ;
+    display: inline-block;
+    padding: 18px 40px 16px;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    margin: 0 auto;
+  }
+
   &__title{
     font-family: $font-popins-semb;
     font-size: 20px;
@@ -121,18 +137,27 @@
     &__item{
       width: 100%;
     }
+    &__all-link{
+      width: 80%;
+      text-align: center;
+    }
   }
 }
 
 @media screen and (max-width: 600px){
   .casino-online{
     width: 100%;
-    padding: 20px 15px;
-    border-radius: 0;
+    &__wrap{
+      width: 100%;
+      padding: 20px 15px;
+      border-radius: 0;
+    }
+
     &__title{
       font-size: 20px;
       line-height: 48px;
     }
+
   }
 }
 

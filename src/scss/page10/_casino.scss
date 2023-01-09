@@ -24,6 +24,12 @@
         color: $grey;
       }
 
+      &:last-child{
+        &:hover{
+          color: $black-one;
+        }
+      }
+
       &:not(:last-child) {
         margin: 0 18px 0 0;
 

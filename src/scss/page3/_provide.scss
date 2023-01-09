@@ -3,6 +3,16 @@
   background: $white;
   border-radius: 8px;
   margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+
+  &__btn-showMore{
+    align-self: flex-start;
+    display: inline-block;
+    padding: 14px 30px 12px;
+    font-size: 15px;
+    line-height: 20px;
+  }
   &__title{
     margin: 0 0 10px 0;
   }
@@ -10,6 +20,7 @@
     display: grid;
     gap: 12px;
     grid-template-columns: calc(33.33% - 8px) calc(33.33% - 8px) calc(33.33% - 8px);
+    margin: 0 0 20px 0;
   }
   &__item{
     padding: 20px;
@@ -37,6 +48,13 @@
     padding: 30px 15px 20px;
     margin: 0 0 10px 0;
     border-radius: 0;
+    &__btn-showMore{
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 }
 

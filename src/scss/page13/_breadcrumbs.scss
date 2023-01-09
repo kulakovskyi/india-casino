@@ -14,7 +14,13 @@
     transition: color $transition;
 
     &:hover {
-      color: $white;
+      color: $black-one;
+    }
+
+    &:last-child{
+      &:hover{
+        color: $grey;
+      }
     }
 
     &:not(:last-child) {

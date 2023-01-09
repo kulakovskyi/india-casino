@@ -4,8 +4,16 @@
   padding: 30px;
   margin: 0 0 20px 0;
 
-  &__title {
+  &__text{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: $black-one;
     margin: 0 0 20px 0;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
   }
 
   &__list{
@@ -156,6 +164,11 @@
       width: 80%;
       margin: 0 auto 10px auto;
     }
+
+    &__text{
+      width: 80%;
+      margin: 0 auto 20px auto;
+    }
     &__list{
       display: flex;
       flex-direction: column;
@@ -177,6 +190,11 @@
     padding: 30px 15px 20px;
     &__title{
       width: 100%;
+    }
+    &__text{
+      width: 100%;
+      font-size: 13px;
+      line-height: 25px;
     }
     &__list{
       width: 100%;

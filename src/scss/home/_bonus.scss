@@ -100,9 +100,6 @@
       top: 20px;
       right: 20px;
       padding: 10.5px;
-      &:hover &-text{
-        display: block;
-      }
       &-text{
         display: none;
         padding: 15px;
@@ -112,9 +109,12 @@
         width: 150px;
         position: absolute;
         top: 50px;
-        right: 0px;
+        right: 0;
         font-size: 12px;
         line-height: 15px;
+        &._show{
+          display: block;
+        }
       }
     }
     &-image{

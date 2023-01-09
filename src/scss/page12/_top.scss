@@ -1,4 +1,18 @@
 .top{
+  display: flex;
+  flex-direction: column;
+  &__all-link{
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
   &__info{
     display: flex;
     align-items: center;
@@ -170,6 +184,10 @@
 }
 @media screen and (max-width: 600px) {
   .top{
+    &__all-link{
+      width: calc(100% - 30px);
+
+    }
     &__info{
       flex-direction: column;
       align-items: center;
@@ -186,17 +204,3 @@
   }
 }
 
-
-@media screen and (max-width: 380px){
-  .top{
-    &__pagination{
-      &-btn{
-        width: 31px;
-        height: 31px;
-        &:not(:last-child){
-          margin: 0 7px 0 0;
-        }
-      }
-    }
-  }
-}
