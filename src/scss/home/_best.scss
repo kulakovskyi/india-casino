@@ -94,6 +94,28 @@
     &:not(:last-child){
       margin: 0 0 10px 0;
     }
+
+    &-link_wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link{
+      margin: 0 0 5px 0;
+    }
+
+    &-sublink{
+      display: inline-block;
+      font-size: 10px;
+      line-height: 11px;
+      color: $grey;
+      transition: color $transition;
+      &:hover{
+        color: $black-one;
+      }
+    }
+
     &-wrapper{
       flex: 1 1 auto;
       display: flex;

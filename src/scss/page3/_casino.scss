@@ -195,11 +195,30 @@
       }
     }
 
+    &-sublink{
+      align-self: center;
+      display: inline-block;
+      font-size: 10px;
+      line-height: 11px;
+      color: $grey;
+      transition: color $transition;
+      &:hover{
+        color: $black-one;
+      }
+    }
+
     &-buttons{
       display: flex;
+      align-items: flex-start;
+
+      &-wrap{
+        display: flex;
+        flex-direction: column;
+
+      }
       &-play{
         padding: 12px 80px 10px;
-        margin: 0 10px 0 0;
+        margin: 0 10px 5px 0;
         font-size: 15px;
         line-height: 20px;
       }
@@ -424,6 +443,10 @@
           font-size: 13px;
           line-height: 20px;
           padding: 10px 70px 8px;
+        }
+        &-like{
+          width: 38px;
+          height: 38px;
         }
       }
       &-wrap{
