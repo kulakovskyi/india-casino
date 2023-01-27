@@ -18,3 +18,6 @@ import { progressBar } from './components/page3/progressBarComponent';
 
 // Реализация скрола по якорю
 import { scrollAnchors } from './functions/scrollAnchors';
+
+//News Tabs
+import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';

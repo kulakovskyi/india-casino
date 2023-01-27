@@ -55,10 +55,25 @@
         background: $orangeBtn;
         box-shadow: $boxShadowBtn;
       }
-      &._active{
-        background: $orangeBtn;
-        box-shadow: $boxShadowBtn;
+      &-one,
+      &-two{
+        &._active{
+          background: $orangeBtn;
+          box-shadow: $boxShadowBtn;
+        }
+      }
+    }
+  }
 
+  &__list{
+    &-one{
+      &._hidden{
+        display: none;
+      }
+    }
+    &-two{
+      &._hidden{
+        display: none;
       }
     }
   }
@@ -71,6 +86,7 @@
       margin: 0 0 15px 0;
     }
     &-image{
+      min-width: 100px;
       max-width: 100px;
       margin: 0 15px 0 0;
       img{

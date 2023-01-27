@@ -17,4 +17,7 @@ import { scrollTop } from './components/scrollTopComponent';
 import { bestItemMobButton } from './components/home/bestItem-mobButtonComponent';
 
 // Реализация скрола по якорю
-import { scrollAnchors } from './functions/scrollAnchors';
+//import { scrollAnchors } from './functions/scrollAnchors';
+
+//News Tabs
+import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';

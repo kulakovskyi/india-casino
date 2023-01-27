@@ -68,10 +68,26 @@
         background: $orangeBtn;
         box-shadow: $boxShadowBtn;
       }
-      &._active{
-        background: $orangeBtn;
-        box-shadow: $boxShadowBtn;
+      &-one,
+      &-two{
+        &._active{
+          background: $orangeBtn;
+          box-shadow: $boxShadowBtn;
+        }
+      }
 
+    }
+  }
+
+  &__list{
+    &-one{
+      &._hidden{
+        display: none;
+      }
+    }
+    &-two{
+      &._hidden{
+        display: none;
       }
     }
   }
@@ -84,6 +100,7 @@
       margin: 0 0 15px 0;
     }
     &-image{
+      min-width: 100px;
       max-width: 100px;
       margin: 0 15px 0 0;
       img{
@@ -241,7 +258,7 @@
     line-height: 48px;
   }
 
-  p{
+  p, li{
     font-family: $font-popins-reg;
     font-size: 15px;
     line-height: 30px;
@@ -385,7 +402,7 @@
       line-height: 26px;
     }
 
-    p{
+    p, li{
       font-size: 13px;
       line-height: 22px;
       margin: 0 0 15px 0;

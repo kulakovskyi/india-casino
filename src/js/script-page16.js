@@ -15,3 +15,4 @@ import { scrollTop } from './components/scrollTopComponent';
 
 //Blocks
 import { bestItemMobButton } from './components/home/bestItem-mobButtonComponent';
+import { slotItem } from './components/home/slotItem-Component.js';

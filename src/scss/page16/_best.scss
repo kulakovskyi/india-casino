@@ -1,18 +1,6 @@
 .best {
+  padding: 60px 0 50px 0;
   background: $pink;
-  padding: 25px 0 0 0;
-
-  &__all-link{
-    display: inline-block;
-    font-family: $font-popins-semb;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: $white;
-    align-self: center;
-    text-align: center;
-    padding: 19px 85px 17px;
-  }
 
   &__container{
     display: flex;
@@ -20,61 +8,28 @@
   }
 
   &__title {
+    text-align: center;
     margin: 0 0 10px 0;
   }
 
   &__text {
     font-size: 15px;
     line-height: 22px;
+    text-align: center;
     color: $black-one;
     max-width: 940px;
-    margin: 0 0 20px 0;
+    margin: 0 auto 20px auto;
   }
 
-  &__tabs {
-    margin: 0 0 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    &-item {
-      &:not(:last-child) {
-        margin: 0 5px 0 0;
-      }
-    }
 
-    &-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    &-btn {
-      display: inline-block;
-      padding: 8px 18px 6px;
-      font-size: 13px;
-      line-height: 22px;
-      color: $grey-tabs;
-      border-radius: 8px;
-      background: transparent;
-      transition: background-color $transition, color $transition, box-shadow $transition;
-
-      &:hover {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
-      }
-
-      &._active {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
-      }
-
-    }
+  &__link{
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    align-self: center;
+    text-align: center;
+    font-family: $font-popins-semb;
+    padding: 19px 85px 17px;
   }
 
   &__list{
@@ -115,6 +70,7 @@
         color: $black-one;
       }
     }
+
     &-wrapper{
       flex: 1 1 auto;
       display: flex;
@@ -142,8 +98,8 @@
       }
     }
     &-image {
-      max-width: 280px;
       min-width: 280px;
+      max-width: 280px;
       margin: 0 23px 0 0;
       border-radius: 8px;
       position: relative;
@@ -342,8 +298,6 @@
       }
     }
   }
-
-
 }
 
 @media screen and (max-width: 1240px) {
@@ -356,21 +310,11 @@
     &__list{
       padding: 0 15px;
     }
-    &__tabs{
-      margin: 0;
 
-      &-wrap{
-        justify-content: flex-start;
-        overflow-x: scroll;
-        padding: 0 15px;
-        margin: 0 0 25px 0;
-      }
-
-    }
 
     &__list{
       display: flex;
-      flex-wrap: wrap;
+      overflow-x: scroll;
       align-items: stretch;
       &._openItem{
         align-items: flex-start;
@@ -383,7 +327,7 @@
       background: $white;
 
       &:not(:last-child){
-        margin: 0 15px 15px 0;
+        margin: 0 15px 0 0;
       }
       &-wrapper{
         flex: 0 1 auto;
@@ -447,44 +391,17 @@
   }
 }
 
-@media screen and (max-width: 720px){
-  .best{
-    padding: 15px 0 0 0;
-    &__list{
-      flex-direction: column;
-      align-items: stretch;
-    }
-    &__item{
-      min-width: 100%;
-      max-width: 100%;
-      &-image{
-        max-width: 100%;
-        min-width: 220px;
-      }
-      &-wrapper{
-        padding: 10px 0 20px 0;
-        width: 95%;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 600px){
   .best{
+    padding: 50px 0 40px 0;
 
-    &__list{
-      margin: 0 0 25px 0;
-    }
-
-    &__all-link{
-      width: calc(100% - 30px);
-
-    }
     &__text{
       font-size: 13px;
       line-height: 22px;
     }
+    &__link{
+      width: calc(100% - 30px);
 
+    }
   }
 }
-

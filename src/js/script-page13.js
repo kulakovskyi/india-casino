@@ -12,3 +12,10 @@ import { scrollTop } from './components/scrollTopComponent';
 
 //Acordeon
 import { accorderon } from './functions/accorderon';
+
+//News Tabs
+import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
+
+
+//Blog Tabs
+import { tabsBtnBlog } from './components/tabsBtnBlogComponent.js';

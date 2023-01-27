@@ -88,6 +88,8 @@
   }
 
   &__item{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border-radius: 12px;
     background: $white;
@@ -125,6 +127,7 @@
       }
     }
     &-title{
+      flex: 1 1 auto;
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.004em;
@@ -143,6 +146,7 @@
       }
     }
     &-link{
+      align-self: flex-start;
       display: inline-block;
       min-width: 160px;
       text-align: center;

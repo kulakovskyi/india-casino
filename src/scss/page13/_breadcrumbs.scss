@@ -1,11 +1,15 @@
-.breadcrumbs {
+
+.casino__breadcrumbs {
   padding: 10px 0 0 0;
-  &__container {
+  &-container {
     display: flex;
     align-items: center;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
-  &__link {
+  &-link {
     display: inline-block;
     position: relative;
     font-size: 12px;
@@ -15,12 +19,6 @@
 
     &:hover {
       color: $black-one;
-    }
-
-    &:last-child{
-      &:hover{
-        color: $grey;
-      }
     }
 
     &:not(:last-child) {
@@ -41,8 +39,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  .breadcrumbs {
-    &__link {
+  .casino__breadcrumbs {
+    &-link {
       font-size: 12px;
       line-height: 20px;
     }

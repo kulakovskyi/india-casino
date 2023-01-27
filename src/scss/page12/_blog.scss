@@ -34,10 +34,14 @@
       color: $grey-tabs;
       border-radius: 8px;
       transition: background-color $transition, box-shadow $transition;
-      &._active{
-        background: $orangeBtn;
-        box-shadow: $boxShadowBtn;
+      &-one,
+      &-two{
+        &._active{
+          background: $orangeBtn;
+          box-shadow: $boxShadowBtn;
+        }
       }
+
       &:hover{
         background: $orangeBtn;
         box-shadow: $boxShadowBtn;
@@ -48,6 +52,19 @@
   &__list{
     display: flex;
     flex-direction: column;
+  }
+
+  &__list{
+    &-one{
+      &._hidden{
+        display: none;
+      }
+    }
+    &-two{
+      &._hidden{
+        display: none;
+      }
+    }
   }
 
   &__item{

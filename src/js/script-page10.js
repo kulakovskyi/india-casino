@@ -18,3 +18,7 @@ import { scrollAnchors } from './functions/scrollAnchors';
 
 // Dynamic Adaptive
 import { dynamicAdaptive } from './components/dynamicAdaptive.js';
+
+//News Tabs
+import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
+

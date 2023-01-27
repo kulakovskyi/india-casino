@@ -16,3 +16,7 @@ import { scrollTop } from './components/scrollTopComponent';
 //Blocks
 import { bestItemMobButton } from './components/home/bestItem-mobButtonComponent';
 import { bonusItem } from './components/home/bonusItem-Component.js';
+import { slotItem } from './components/home/slotItem-Component.js';
+
+//News Tabs
+import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';

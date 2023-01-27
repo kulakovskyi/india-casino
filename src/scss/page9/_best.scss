@@ -1,5 +1,6 @@
 .best {
   background: $pink;
+  padding: 25px 0 0 0;
 
   &__container{
     display: flex;
@@ -91,6 +92,7 @@
 
 @media screen and (max-width: 1024px){
   .best{
+    padding: 15px 0 0 0;
     &__list{
       grid-template-columns: calc(33.33% - 17px) calc(33.33% - 17px) calc(33.33% - 17px) ;
       width: 100%;

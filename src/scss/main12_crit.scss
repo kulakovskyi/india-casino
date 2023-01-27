@@ -55,9 +55,16 @@ body {
 
 .aside{
   min-width: 400px;
+  max-width: 400px;
   @media screen and (max-width: 1285px){
     min-width: 380px;
+    max-width: 380px;
   }
+
+  @media screen and (max-width: 1024px){
+    max-width: 100%;
+  }
+
 
   @media screen and (max-width: 600px){
     min-width: auto;
