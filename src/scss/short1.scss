@@ -1,0 +1,30 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "_colorStyles";
+@import "base/nullstyle";
+@import "base/wrapper";
+
+
+[class*="__container"] {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: $font-popins-reg;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: $black-one;
+  background: transparent;
+}
+
+// подключения компонентов страницы
+
+@import "short1/_best";
