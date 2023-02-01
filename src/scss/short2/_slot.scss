@@ -3,6 +3,9 @@
   &._onWhite{
     padding: 15px;
     border-radius: 8px;
+    @media screen and (max-width: 350px){
+      padding: 5px;
+    }
   }
   background: $pink;
 

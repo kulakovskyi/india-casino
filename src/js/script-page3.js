@@ -21,3 +21,8 @@ import { scrollAnchors } from './functions/scrollAnchors';
 
 //News Tabs
 import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
+
+//shorts
+import { mobBtnBestCasino } from './components/shortComponents/short1-component.js';
+import { btnInfo } from './components/shortComponents/short2-component.js';
+import { btnCard } from './components/shortComponents/short7-component.js';
