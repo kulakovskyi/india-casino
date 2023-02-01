@@ -1,30 +1,33 @@
-.news{
+.news {
   background: $pink;
   padding: 70px 0;
-  &__row{
+
+  &__row {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
-  &__blog{
-    max-width: 700px;
-    margin: 0 25px 0 0;
+
+  &__blog {
+    max-width: 880px;
+    margin: 0 30px 0 0;
   }
 }
 
 //casino-online aside styles
-.casino-online{
+.casino-online {
   display: flex;
   flex-direction: column;
-  &__wrap{
+
+  &__wrap {
     padding: 30px 40px;
     border-radius: 8px;
     background: $burgundy-gradient;
     margin: 0 0 20px 0;
   }
 
-  &__all-link{
-    align-self: center ;
+  &__all-link {
+    align-self: center;
     display: inline-block;
     padding: 18px 40px 16px;
     font-size: 17px;
@@ -33,7 +36,7 @@
     margin: 0 auto;
   }
 
-  &__title{
+  &__title {
     font-family: $font-popins-semb;
     font-size: 20px;
     line-height: 48px;
@@ -43,7 +46,7 @@
     text-align: center;
   }
 
-  &__tabs{
+  &__tabs {
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,7 +55,8 @@
     border-radius: 8px;
     padding: 5px;
     margin: 0 0 20px 0;
-    &-btn{
+
+    &-btn {
       width: calc(50% - 2.5px);
       display: inline-block;
       padding: 7px 15px 5px;
@@ -62,16 +66,19 @@
       line-height: 22px;
       background: transparent;
       transition: background-color $transition;
-      &:first-child{
+
+      &:first-child {
         margin: 0 5px 0 0;
       }
-      &:hover{
+
+      &:hover {
         background: $orangeBtn;
         box-shadow: $boxShadowBtn;
       }
+
       &-one,
-      &-two{
-        &._active{
+      &-two {
+        &._active {
           background: $orangeBtn;
           box-shadow: $boxShadowBtn;
         }
@@ -80,63 +87,73 @@
     }
   }
 
-  &__list{
-    &-one{
-      &._hidden{
+  &__list {
+    &-one {
+      &._hidden {
         display: none;
       }
     }
-    &-two{
-      &._hidden{
+
+    &-two {
+      &._hidden {
         display: none;
       }
     }
   }
 
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     width: 315px;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin: 0 0 15px 0;
     }
-    &-image{
+
+    &-image {
       min-width: 100px;
       max-width: 100px;
       margin: 0 15px 0 0;
-      img{
+
+      img {
         border-radius: 8px;
       }
     }
-    &-info{
+
+    &-info {
       flex: 1 1 auto;
       margin: 0 15px 0 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-    &-title{
+
+    &-title {
       font-family: $font-popins-reg;
       font-size: 14px;
       line-height: 21px;
       letter-spacing: -0.004em;
       color: $white;
     }
-    &-reviews{
+
+    &-reviews {
       display: flex;
       align-items: center;
-      &-img{
+
+      &-img {
         display: inline-block;
         margin: 0 5px 0 0;
       }
-      &-grade{
+
+      &-grade {
         font-family: $font-popins-reg;
         font-size: 12px;
         line-height: 18px;
         color: $grey;
       }
     }
-    &-link{
+
+    &-link {
       display: inline-block;
       padding: 7px 26px 5px;
       font-family: $font-popins-reg;
@@ -147,30 +164,33 @@
   }
 }
 
-@media screen and (max-width: 1024px){
-  .casino-online{
+@media screen and (max-width: 1024px) {
+  .casino-online {
     width: 80%;
     margin: 0 auto;
-    &__item{
+
+    &__item {
       width: 100%;
     }
-    &__all-link{
+
+    &__all-link {
       width: 80%;
       text-align: center;
     }
   }
 }
 
-@media screen and (max-width: 600px){
-  .casino-online{
+@media screen and (max-width: 600px) {
+  .casino-online {
     width: 100%;
-    &__wrap{
+
+    &__wrap {
       width: 100%;
       padding: 20px 15px;
       border-radius: 0;
     }
 
-    &__title{
+    &__title {
       font-size: 20px;
       line-height: 48px;
     }
@@ -179,9 +199,8 @@
 }
 
 
-
-.news__blog{
-  h2{
+.news__blog {
+  h2 {
     font-family: $font-popins-semb;
     font-size: 28px;
     line-height: 48px;
@@ -189,33 +208,33 @@
     margin: 0 0 10px 0;
   }
 
-  h3,h4,h5,h6{
+  h3, h4, h5, h6 {
     font-family: $font-popins-semb;
     letter-spacing: -0.01em;
     color: $black-one;
   }
 
-  h3{
+  h3 {
     font-size: 20px;
     line-height: 40px;
   }
 
-  h4{
+  h4 {
     font-size: 18px;
     line-height: 48px;
   }
 
-  h5{
+  h5 {
     font-size: 16px;
     line-height: 48px;
   }
 
-  h6{
+  h6 {
     font-size: 14px;
     line-height: 48px;
   }
 
-  p, li{
+  p, li {
     font-family: $font-popins-reg;
     font-size: 15px;
     line-height: 30px;
@@ -223,16 +242,18 @@
     color: $black-one;
   }
 
-  ol{
+  ol {
     list-style-type: none;
     margin: 0 0 30px 0;
     counter-reset: counter-ol;
-    li{
+
+    li {
       display: flex;
       align-items: flex-start;
-      &::before{
+
+      &::before {
         counter-increment: counter-ol;
-        content: counter(counter-ol) " " ;
+        content: counter(counter-ol) " ";
         display: flex;
         align-items: center;
         justify-content: center;
@@ -246,22 +267,26 @@
         border-radius: 50%;
         background: $burgunde-circle-gradient;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 20px 0;
       }
-      p{
+
+      p {
         margin: 0;
         color: $black-one;
       }
     }
   }
 
-  ul{
+  ul {
     margin: 0 0 30px 0;
-    li{
+
+    li {
       position: relative;
       padding: 0 0 0 47px;
-      &::before{
+
+      &::before {
         content: 'i';
         position: absolute;
         display: flex;
@@ -278,17 +303,19 @@
         border-radius: 8px;
         background: $burgundy-gradient;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 15px 0;
       }
-      p{
+
+      p {
         margin: 0;
         color: $black-one;
       }
     }
   }
 
-  blockquote{
+  blockquote {
     position: relative;
     padding: 85px 30px 20px;
     border-radius: 8px;
@@ -298,7 +325,8 @@
     line-height: 30px;
     letter-spacing: 0.01em;
     margin: 0 0 20px 0;
-    &::before{
+
+    &::before {
       pointer-events: none;
       content: '‟';
       font-size: 65px;
@@ -311,7 +339,8 @@
       top: 30px;
       left: 30px;
     }
-    &::after{
+
+    &::after {
       pointer-events: none;
       content: '‟';
       font-size: 65px;
@@ -328,27 +357,31 @@
 }
 
 
-.content-table{
+.content-table {
   border-radius: 20px;
   overflow-x: hidden;
-  table{
+
+  table {
     border-collapse: collapse;
     width: 100%;
     margin: 0 0 20px 0;
     background: $white;
-    tr,td{
+
+    tr, td {
       border: 1px solid #ddd;
       padding: 15px;
       color: $black-one;
       font-size: 15px;
       line-height: 20px;
     }
+
     tr:first-child {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
       background: $burgundy-gradient;
-      td{
+
+      td {
         color: $white;
       }
 
@@ -358,80 +391,1162 @@
 
 
 @media screen and (max-width: 1024px) {
-  .news{
-    &__row{
+  .news {
+    &__row {
       flex-direction: column;
     }
-    &__blog{
+
+    &__blog {
       margin: 0 0 20px 0;
       max-width: 100%;
     }
   }
 
-  .content-table{
+  .content-table {
     overflow-x: scroll;
-    table{
+
+    table {
       min-width: 600px;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
-  .news{
+  .news {
     padding: 50px 0;
-    &__container{
+
+    &__container {
       padding: 0;
     }
-    &__blog{
+
+    &__blog {
       padding: 0 15px;
     }
   }
 
 
-  .content-table{
-    table{
-      tr,td{
+  .content-table {
+    table {
+      tr, td {
         font-size: 13px;
         line-height: 19px;
       }
     }
   }
 
-  .news__blog{
-    h2{
+  .news__blog {
+    h2 {
       font-size: 20px;
       line-height: 30px;
       margin: 0 0 15px 0;
     }
 
-    h3,h4,h5,h6{
+    h3, h4, h5, h6 {
       font-size: 17px;
       line-height: 26px;
     }
 
-    p, li{
+    p, li {
       font-size: 13px;
       line-height: 22px;
       margin: 0 0 15px 0;
     }
 
-    ol{
+    ol {
       margin: 0 0 20px 0;
-      li{
-        &:not(:last-child){
+
+      li {
+        &:not(:last-child) {
           margin: 0 0 10px 0;
         }
       }
     }
 
-    ul{
+    ul {
       margin: 0 0 20px 0;
     }
 
-    blockquote{
+    blockquote {
       padding: 85px 20px 20px 20px;
       font-size: 13px;
       line-height: 28px;
+    }
+  }
+}
+
+
+//casino-slot block    SHORT-1
+
+.casino-best {
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
+  background: $pink;
+  margin: 0 0 20px 0;
+
+  &__all-link {
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    color: $black-one;
+    max-width: 940px;
+    margin: 0 0 20px 0;
+  }
+
+
+  &__list {
+    width: 100%;
+    margin: 0 0 35px 0;
+    counter-reset: my-counter;
+    display: grid;
+    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    gap: 15px;
+
+    &._openItem {
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+    flex-direction: column;
+    background: $white;
+
+
+    &-link_wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link {
+      margin: 0 0 5px 0;
+    }
+
+    &-sublink {
+      display: inline-block;
+      font-size: 10px;
+      line-height: 11px;
+      color: $grey;
+      transition: color $transition;
+
+      &:hover {
+        color: $black-one;
+      }
+    }
+
+    &-wrapper {
+      flex: 0 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10px 20px 10px;
+      border-bottom: 3px dotted $pink;
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        pointer-events: none;
+        width: 19px;
+        height: 19px;
+        background: $pink;
+        border-radius: 50%;
+        right: -11px;
+      }
+
+      &::before {
+        right: -20px;
+        bottom: -11px;
+      }
+
+      &::after {
+        top: auto;
+        bottom: -11px;
+        left: -20px;
+      }
+    }
+
+    &-image {
+
+      min-width: 100%;
+      border-radius: 8px;
+      position: relative;
+      margin: 0 0 15px 0;
+
+      img {
+        min-width: 100%;
+        border-radius: 8px;
+      }
+
+      &::before {
+        counter-increment: my-counter;
+        content: counter(my-counter) " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: $font-popins-semb;
+        background: $burgundy;
+        border-radius: 8px 0 8px 0;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 25px 0;
+      min-width: 164px;
+    }
+
+    &-title {
+      font-family: $font-popins-semb;
+      font-size: 22px;
+      line-height: 20px;
+      letter-spacing: -0.004em;
+      color: $grey-tabs;
+      margin: 0 0 8px 0;
+    }
+
+    &-licensed {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      color: $blue;
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+
+      &-one {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &-rating {
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px 0;
+
+      &-star {
+        margin: 0 10px 0 0;
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 6px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+
+      &-comment {
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 5px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 20px;
+      color: $white;
+      padding: 12px 47px 10px;
+    }
+
+    &-reviews {
+      align-items: flex-start;
+      flex-direction: column;
+      display: none;
+      flex: 1 1 auto;
+
+      &._show {
+        display: flex;
+      }
+
+      &-plus {
+        margin: 0 0 20px 0
+      }
+
+      &-btn {
+        display: inline-block;
+        position: absolute;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        padding: 7px 25px 5px;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 8px;
+        color: $black-one;
+        background: $pink;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &-plus,
+    &-minus {
+      display: flex;
+      flex-direction: column;
+
+      &-txt {
+        display: flex;
+        align-items: flex-start;
+        font-size: 12px;
+        line-height: 28px;
+        color: $grey;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          margin: 6px 8px 0 0;
+          min-width: 16px;
+          min-height: 16px;
+        }
+      }
+    }
+
+    &-plus {
+      margin: 0 30px 0 0;
+
+      &-txt {
+        &::before {
+          background: url("../img/home/best/arrow.svg") no-repeat 0% 0%/contain;
+        }
+      }
+    }
+
+
+    &-coupon {
+      max-width: 240px;
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 25px 10px;
+      background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
+
+      &-title {
+        font-family: $font-popins-semb;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-subtitle {
+        text-align: center;
+        font-family: $font-popins-semb;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-text {
+        flex: 1 1 auto;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 10px 0;
+      }
+
+      &-link {
+        width: 60%;
+        text-align: center;
+        display: inline-block;
+        padding: 12px 28px 10px;
+        color: $black-font-orangeBtn;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .casino-best {
+
+    &__list {
+      margin: 0 0 25px 0;
+      grid-template-columns: 100%;
+    }
+
+    &__all-link {
+      width: calc(100% - 30px);
+
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 22px;
+    }
+
+  }
+}
+
+
+//casino-slot block     SHORT-2
+.casino-slot {
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
+  background: $pink;
+
+  margin: 0 0 20px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+
+  &__link {
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    background: $white;
+    position: relative;
+    max-width: 330px;
+
+    &-info {
+      position: absolute;
+      cursor: pointer;
+      top: 20px;
+      right: 20px;
+      padding: 10.5px;
+
+      &-text {
+        display: none;
+        padding: 15px;
+        border-radius: 8px;
+        background: $burgundyBtn;
+        color: $white;
+        width: 150px;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        font-size: 12px;
+        line-height: 15px;
+
+        &._show {
+          display: block;
+        }
+      }
+    }
+
+    &-image {
+      max-width: 160px;
+      margin: 0 0 10px 0;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    &-title {
+      flex: 1 1 auto;
+      font-size: 17px;
+      line-height: 26px;
+      letter-spacing: -0.004em;
+      color: $black-one;
+      margin: 0 0 2px 0;
+    }
+
+    &-licensed {
+      display: flex;
+      color: $blue;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      margin: 0 0 20px 0;
+
+      &-one {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &-link {
+      align-self: flex-start;
+      display: inline-block;
+      min-width: 160px;
+      text-align: center;
+      padding: 12px 30px 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-slot {
+    &__list {
+      display: grid;
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      gap: 15px;
+      margin: 0 0 30px 0;
+    }
+
+    &__item {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino-slot {
+    &__list {
+      grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    }
+
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .casino-slot {
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-slot {
+
+    &__link {
+      width: calc(100% - 30px);
+
+    }
+
+    &__list {
+      grid-template-columns: 100%;
+      gap: 15px;
+    }
+  }
+}
+
+
+//casino-review block    SHORT-3
+
+.casino-review {
+  background: $pink;
+  margin: 0 0 20px 0;
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  &__all-link {
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    justify-content: start;
+    gap: 15px;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    width: 100%;
+
+    &-info {
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+    }
+
+    &-image {
+      max-width: 160px;
+      margin: 0 20px 0 0;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    &-rtp {
+      &-percent {
+        font-family: $font-popins-semb;
+        font-size: 20px;
+        line-height: 16px;
+        letter-spacing: -0.004em;
+        color: $burgundy;
+        margin: 0 0 5px 0;
+      }
+
+      &-text {
+        max-width: 70px;
+        font-size: 11px;
+        line-height: 14px;
+        color: $black-one;
+
+      }
+    }
+
+    &-title {
+      font-size: 17px;
+      line-height: 26px;
+      letter-spacing: -0.004em;
+      color: $black-one;
+      margin: 0 0 2px 0;
+    }
+
+    &-licensed {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      color: $blue;
+      margin: 0 0 10px 0;
+
+      &-one {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &-review {
+
+      display: flex;
+      align-items: center;
+      margin: 0 0 auto 0;
+
+      &-star,
+      &-comment {
+        display: flex;
+
+        img {
+          display: inline-block;
+          margin: 0 5px 0 0;
+        }
+      }
+
+      &-text {
+        font-size: 12px;
+        line-height: 12px;
+        color: $black-one;
+      }
+
+      &-star {
+        margin: 0 10px 0 0;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0 20px 0;
+    }
+
+    &-item {
+      padding: 8px 0;
+      border-top: 1px solid $grey-white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:last-child {
+        border-bottom: 1px solid $grey-white;
+      }
+
+      &-title {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 10px 0 0;
+      }
+
+      &-info {
+        font-family: $font-popins-semb;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+
+    }
+
+    &-btn {
+      width: calc(50% - 5px);
+      display: inline-block;
+      text-align: center;
+      padding: 12px 10px 10px;
+      font-size: 15px;
+      line-height: 20px;
+
+      &:not(:last-child) {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .casino-review {
+    &__all-link {
+      width: calc(100% - 30px);
+
+    }
+
+    &__list {
+      grid-template-columns: 100%;
+      padding: 0;
+      gap: 10px;
+      margin: 0 0 20px 0;
+    }
+
+    &__item {
+      padding: 20px;
+
+      &-list {
+        display: grid;
+        grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+        gap: 10px;
+      }
+
+      &-item {
+        border-top: 1px solid $grey-white;
+
+        &:last-child,
+        &:nth-child(3) {
+          border-bottom: 1px solid $grey-white;
+        }
+      }
+    }
+
+  }
+}
+
+//casino-payments block    SHORT-4
+
+.casino-payments {
+  background: $pink;
+  margin: 0 0 20px 0;
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  &__all-link {
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    gap: 15px;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 20px;
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      background: $pink;
+      border-radius: 8px;
+      margin: 0 0 10px 0;
+    }
+
+    &-title {
+      font-size: 17px;
+      line-height: 26px;
+      color: $black-one;
+      margin: 0 0 2px 0;
+    }
+
+    &-info {
+      font-size: 13px;
+      line-height: 16px;
+      color: $black-one;
+      margin: 0 0 20px 0;
+
+      span {
+        font-family: $font-popins-semb;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      padding: 12px 50px 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-payments {
+    &__container {
+      padding: 0;
+    }
+
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px)
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino-payments {
+
+    &__list {
+      grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .casino-payments {
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-payments {
+    &__all-link {
+      width: calc(100% - 30px);
+
+    }
+
+    &__list {
+      grid-template-columns: 100%;
+      padding: 0;
+      gap: 10px;
+      margin: 0 0 20px 0;
+    }
+
+    &__item {
+      padding: 15px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      column-gap: 10px;
+
+      &-image {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        margin: 0 0 12px 0;
+      }
+
+      &-title {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+
+      &-info {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        margin: 0;
+      }
+
+      &-link {
+        grid-row: 2/4;
+        grid-column: 2/3;
+        justify-self: end;
+        align-self: start;
+      }
+    }
+
+  }
+}
+
+
+//casino-providers block    SHORT-6
+
+.casino-providers {
+  background: $pink;
+  margin: 0 0 20px 0;
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    gap: 15px;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 20px;
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    &-image {
+      margin: 0 0 10px 0;
+      max-width: 162px;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    &-title {
+      font-size: 17px;
+      line-height: 26px;
+      color: $black-one;
+      margin: 0 0 2px 0;
+    }
+
+    &-info {
+      font-size: 13px;
+      line-height: 16px;
+      color: $black-one;
+      margin: 0 0 20px 0;
+
+      span {
+        font-family: $font-popins-semb;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      padding: 12px 50px 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  &__all-link {
+    align-self: center;
+    font-family: $font-popins-semb;
+    display: inline-block;
+    padding: 18px 70px 16px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-providers {
+    &__container {
+      padding: 0;
+    }
+
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px)
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino-providers {
+
+    &__list {
+      grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .casino-providers {
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-providers {
+    &__list {
+      grid-template-columns: 100%;
+      padding: 0;
+      gap: 10px;
+      margin: 0 0 20px 0;
+    }
+
+    &__item {
+      padding: 15px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      column-gap: 10px;
+
+      &-image {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        margin: 0 0 12px 0;
+      }
+
+      &-title {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+
+      &-info {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        margin: 0;
+      }
+
+      &-link {
+        grid-row: 2/4;
+        grid-column: 2/3;
+        justify-self: end;
+        align-self: start;
+      }
+    }
+
+    &__all-link {
+      padding: 17px 15px 15px;
+      width: 96%;
+      text-align: center;
     }
   }
 }

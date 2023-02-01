@@ -20,3 +20,7 @@ import { slotItem } from './components/home/slotItem-Component.js';
 
 //News Tabs
 import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
+
+//shorts
+import { mobBtnBestCasino } from './components/shortComponents/short1-component.js';
+import { btnInfo } from './components/shortComponents/short2-component.js';
