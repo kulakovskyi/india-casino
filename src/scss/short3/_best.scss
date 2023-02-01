@@ -1,8 +1,14 @@
+//casino-review block    SHORT-3
+
 .casino-review {
   background: $pink;
   margin: 0 0 20px 0;
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
 
-  &__all-link{
+  &__all-link {
     display: inline-block;
     font-family: $font-popins-semb;
     font-size: 17px;
@@ -14,22 +20,23 @@
     padding: 19px 85px 17px;
   }
 
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
 
 
-  &__list{
+  &__list {
     display: grid;
-    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    //grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
     justify-content: start;
     gap: 15px;
     margin: 0 0 30px 0;
   }
 
-  &__item{
+  &__item {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -37,20 +44,24 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     width: 100%;
-    &-info{
+
+    &-info {
       display: flex;
       align-items: center;
       margin: 0 0 10px 0;
     }
-    &-image{
+
+    &-image {
       max-width: 160px;
       margin: 0 20px 0 0;
-      img{
+
+      img {
         border-radius: 8px;
       }
     }
-    &-rtp{
-      &-percent{
+
+    &-rtp {
+      &-percent {
         font-family: $font-popins-semb;
         font-size: 20px;
         line-height: 16px;
@@ -58,7 +69,8 @@
         color: $burgundy;
         margin: 0 0 5px 0;
       }
-      &-text{
+
+      &-text {
         max-width: 70px;
         font-size: 11px;
         line-height: 14px;
@@ -66,14 +78,16 @@
 
       }
     }
-    &-title{
+
+    &-title {
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.004em;
       color: $black-one;
       margin: 0 0 2px 0;
     }
-    &-licensed{
+
+    &-licensed {
       display: flex;
       align-items: center;
       font-size: 12px;
@@ -81,54 +95,65 @@
       letter-spacing: -0.004em;
       color: $blue;
       margin: 0 0 10px 0;
-      &-one{
+
+      &-one {
         margin: 0 8px 0 0;
       }
     }
-    &-review{
+
+    &-review {
 
       display: flex;
       align-items: center;
       margin: 0 0 auto 0;
+
       &-star,
-      &-comment{
+      &-comment {
         display: flex;
-        img{
+
+        img {
           display: inline-block;
           margin: 0 5px 0 0;
         }
       }
-      &-text{
+
+      &-text {
         font-size: 12px;
         line-height: 12px;
         color: $black-one;
       }
-      &-star{
+
+      &-star {
         margin: 0 10px 0 0;
       }
     }
-    &-list{
+
+    &-list {
       display: flex;
       flex-direction: column;
       margin: 20px 0 20px 0;
     }
-    &-item{
+
+    &-item {
       padding: 8px 0;
       border-top: 1px solid $grey-white;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      &:last-child{
+
+      &:last-child {
         border-bottom: 1px solid $grey-white;
       }
-      &-title{
+
+      &-title {
         font-size: 13px;
         line-height: 20px;
         letter-spacing: -0.004em;
         color: $black-one;
         margin: 0 10px 0 0;
       }
-      &-info{
+
+      &-info {
         font-family: $font-popins-semb;
         font-size: 15px;
         line-height: 22px;
@@ -136,19 +161,22 @@
         color: $black-one;
       }
     }
-    &-buttons{
+
+    &-buttons {
       display: flex;
       align-items: center;
 
     }
-    &-btn{
+
+    &-btn {
       width: calc(50% - 5px);
       display: inline-block;
       text-align: center;
       padding: 12px 10px 10px;
       font-size: 15px;
       line-height: 20px;
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 10px 0 0;
       }
     }
@@ -157,30 +185,46 @@
 
 }
 
-@media screen and (max-width: 600px){
-  .casino-review{
-    &__all-link{
+@media screen and (max-width: 1240px) {
+  .casino-review {
+    &__list {
+      display: grid;
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      gap: 15px;
+      margin: 0 0 30px 0;
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-review {
+    &__all-link {
       width: calc(100% - 30px);
 
     }
 
-    &__list{
+    &__list {
       grid-template-columns: 100%;
       padding: 0;
       gap: 10px;
       margin: 0 0 20px 0;
     }
-    &__item{
+
+    &__item {
       padding: 20px;
-      &-list{
+
+      &-list {
         display: grid;
         grid-template-columns: calc(50% - 5px) calc(50% - 5px);
         gap: 10px;
       }
-      &-item{
+
+      &-item {
         border-top: 1px solid $grey-white;
+
         &:last-child,
-        &:nth-child(3){
+        &:nth-child(3) {
           border-bottom: 1px solid $grey-white;
         }
       }

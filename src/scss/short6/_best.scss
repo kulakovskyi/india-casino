@@ -1,6 +1,12 @@
+//casino-providers block    SHORT-6
+
 .casino-providers {
   background: $pink;
   margin: 0 0 20px 0;
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
 
   &__container {
     display: flex;

@@ -1,8 +1,12 @@
 .casino-best {
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+  }
   background: $pink;
   margin: 0 0 20px 0;
 
-  &__all-link{
+  &__all-link {
     display: inline-block;
     font-family: $font-popins-semb;
     font-size: 17px;
@@ -14,7 +18,7 @@
     padding: 19px 85px 17px;
   }
 
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -33,14 +37,16 @@
   }
 
 
-  &__list{
+  &__list {
     width: 100%;
     margin: 0 0 35px 0;
-    counter-reset: my-counter ;
+    counter-reset: my-counter;
     display: grid;
-    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    //grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
     gap: 15px;
-    &._openItem{
+
+    &._openItem {
       align-items: flex-start;
     }
   }
@@ -56,27 +62,29 @@
     background: $white;
 
 
-    &-link_wrap{
+    &-link_wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    &-link{
+    &-link {
       margin: 0 0 5px 0;
     }
 
-    &-sublink{
+    &-sublink {
       display: inline-block;
       font-size: 10px;
       line-height: 11px;
       color: $grey;
       transition: color $transition;
-      &:hover{
+
+      &:hover {
         color: $black-one;
       }
     }
-    &-wrapper{
+
+    &-wrapper {
       flex: 0 1 auto;
       display: flex;
       flex-direction: column;
@@ -84,8 +92,9 @@
       padding: 10px 10px 20px 10px;
       border-bottom: 3px dotted $pink;
       position: relative;
+
       &::before,
-      &::after{
+      &::after {
         position: absolute;
         pointer-events: none;
         width: 19px;
@@ -94,29 +103,34 @@
         border-radius: 50%;
         right: -11px;
       }
-      &::before{
+
+      &::before {
         right: -20px;
         bottom: -11px;
       }
-      &::after{
+
+      &::after {
         top: auto;
         bottom: -11px;
         left: -20px;
       }
     }
+
     &-image {
 
       min-width: 100%;
       border-radius: 8px;
       position: relative;
       margin: 0 0 15px 0;
-      img{
+
+      img {
         min-width: 100%;
         border-radius: 8px;
       }
-      &::before{
+
+      &::before {
         counter-increment: my-counter;
-        content: counter(my-counter) " " ;
+        content: counter(my-counter) " ";
         position: absolute;
         top: 0;
         left: 0;
@@ -144,7 +158,7 @@
 
     &-title {
       font-family: $font-popins-semb;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 20px;
       letter-spacing: -0.004em;
       color: $grey-tabs;
@@ -219,13 +233,16 @@
       flex-direction: column;
       display: none;
       flex: 1 1 auto;
-      &._show{
+
+      &._show {
         display: flex;
       }
-      &-plus{
+
+      &-plus {
         margin: 0 0 20px 0
       }
-      &-btn{
+
+      &-btn {
         display: inline-block;
         position: absolute;
         bottom: -17px;
@@ -285,6 +302,7 @@
       height: 100%;
       padding: 25px 10px;
       background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
+
       &-title {
         font-family: $font-popins-semb;
         font-size: 15px;
@@ -296,8 +314,8 @@
       &-subtitle {
         text-align: center;
         font-family: $font-popins-semb;
-        font-size: 24px;
-        line-height: 24px;
+        font-size: 21px;
+        line-height: 21px;
         letter-spacing: -0.004em;
         color: $black-one;
         margin: 0 0 5px 0;
@@ -327,19 +345,32 @@
 
 }
 
-@media screen and (max-width: 600px){
-  .casino-best{
+@media screen and (max-width: 1240px) {
+  .casino-best {
+    &__list {
+      display: grid;
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      gap: 15px;
+      margin: 0 0 30px 0;
+    }
 
-    &__list{
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-best {
+
+    &__list {
       margin: 0 0 25px 0;
       grid-template-columns: 100%;
     }
 
-    &__all-link{
+    &__all-link {
       width: calc(100% - 30px);
 
     }
-    &__text{
+
+    &__text {
       font-size: 13px;
       line-height: 22px;
     }
