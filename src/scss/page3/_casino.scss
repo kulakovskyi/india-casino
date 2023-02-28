@@ -190,8 +190,9 @@
           margin: 0 6px 0 0;
         }
       }
-      &-star{
-        margin: 0 12px 0 0;
+      &-comment{
+        display: none;
+        margin: 0 0 0 12px;
       }
     }
 
@@ -223,9 +224,10 @@
         line-height: 20px;
       }
       &-like{
+        display: none;
         width: 42px;
         height: 42px;
-        display: flex;
+        //display: flex;
         align-items: center;
         justify-content: center;
       }
@@ -245,6 +247,7 @@
         align-items: center;
         margin: 0 0 8px 0;
         img{
+          max-width: 20px;
           border-radius: 50%;
           margin: 0 10px 0 0;
         }

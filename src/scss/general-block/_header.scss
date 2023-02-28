@@ -332,7 +332,8 @@
     &-list {
       position: absolute;
       z-index: 1;
-      min-width: 257px;
+      min-width: 220px;
+      max-width: 220px;
       top: 30px;
       left: 0;
       display: none;
@@ -360,6 +361,90 @@
       display: block;
     }
 
+    &-sub_list-2,
+    &-sub_list-3 {
+      span{
+        cursor: pointer;
+      }
+      span::after{
+        content: none !important;
+      }
+    }
+
+
+    &-list-2{
+      position: absolute;
+      z-index: 3;
+      min-width: 220px;
+      max-width: 220px;
+      top: -7px;
+      left: 204px;
+      display: none;
+      padding: 10px 20px;
+      background: linear-gradient(180deg, #FCEDF0 0%, #FFFFFF 29.32%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+
+    }
+
+    &-hover-desc-2{
+      position: relative;
+      &::before {
+        position: absolute;
+        background: transparent;
+        cursor: pointer;
+        width: 23%;
+        height: 28px;
+        top: 3px;
+        right: -40px;
+        z-index: 0;
+      }
+      &:hover::before{
+        content: '';
+      }
+    }
+
+    &-hover-desc-2:hover &-list-2 {
+      display: block;
+
+    }
+
+    &-list-3{
+      position: absolute;
+      z-index: 3;
+      min-width: 220px;
+      max-width: 220px;
+      top: -7px;
+      left: 204px;
+      display: none;
+      padding: 10px 20px;
+      background: linear-gradient(180deg, #FCEDF0 0%, #FFFFFF 29.32%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+
+    }
+
+    &-hover-desc-3{
+      position: relative;
+      &::before {
+        position: absolute;
+        background: transparent;
+        cursor: pointer;
+        width: 23%;
+        height: 28px;
+        top: 3px;
+        right: -40px;
+        z-index: 0;
+      }
+      &:hover::before{
+        content: '';
+      }
+    }
+
+    &-hover-desc-3:hover &-list-3 {
+      display: block;
+
+    }
   }
 
   &__link {
@@ -417,7 +502,10 @@
         }
       }
 
-      &-list {
+      &-list,
+      &-list-2,
+      &-list-3{
+        max-width: 100%;
         width: 100%;
         position: static;
         display: none;

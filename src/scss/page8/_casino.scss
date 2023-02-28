@@ -61,15 +61,14 @@
     }
 
     &-image {
-      width: 325px;
-      height: 112px;
+      max-width: 325px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 25px 0 0;
-      padding: 35px;
-      background: $pink;
-      border-radius: 8px;
+      img{
+        border-radius: 8px;
+      }
     }
 
     &-play {
@@ -111,8 +110,8 @@
         }
       }
 
-      &-star {
-        margin: 0 12px 0 0;
+      &-comment{
+        margin: 0 0 0 12px;
       }
     }
 
@@ -144,6 +143,7 @@
         margin: 0 0 8px 0;
 
         img {
+          max-width: 20px;
           border-radius: 50%;
           margin: 0 10px 0 0;
         }
@@ -197,8 +197,6 @@
         margin: 0 0 20px 0;
       }
 
-      &-image {
-      }
 
       &-country {
         flex-direction: row;

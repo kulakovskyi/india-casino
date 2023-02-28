@@ -32,3 +32,14 @@
   }
 }
 
+.grey-btn-two{
+  border-radius: 8px;
+  color: $black-font-orangeBtn;
+  background: $greyBtn-2;
+  box-shadow: $boxShadowBtn;
+  transition: background-color $transition;
+  &:hover{
+    background: $orangeBtn-hover;
+  }
+}
+

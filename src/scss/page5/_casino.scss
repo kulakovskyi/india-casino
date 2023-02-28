@@ -5,6 +5,7 @@
   &__breadcrumbs {
     display: flex;
     align-items: center;
+    align-items: center;
     margin: 0 0 10px 0;
 
     &-link {
@@ -93,9 +94,8 @@
       align-items: center;
       justify-content: flex-start;
       margin: 0 0 15px 0;
-      &-star{
-        margin: 0 12px 0 0;
-      }
+
+
       &-star,
       &-comment{
         display: flex;
@@ -104,6 +104,10 @@
           display: inline-block;
           margin: 0 6px 0 0;
         }
+      }
+      &-comment{
+        display: none;
+        margin: 0 0 0 12px;
       }
       &-text{
         font-size: 12px;
@@ -123,7 +127,8 @@
       margin: 0 10px 0 0;
     }
     &-btn_like{
-      display: flex;
+      display: none;
+      //display: flex;
       align-items: center;
       justify-content: center;
       width: 42px;
